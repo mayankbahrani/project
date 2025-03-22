@@ -1,0 +1,59 @@
+<% layout("/layout/boilerplate") %>
+
+ <div class="row">
+
+   <div class="col-8 offset-2">
+
+    <form method="post" class="needs-validation" action="/listings" enctype="multipart/form-data" novalidate>
+
+        <div>
+            <label for="title" class="form-label" >Title</label>
+            <input required name="listing[title]" placeholder="enter title here" type="text" class="form-control">
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+        
+        <div>
+            <label for="description" class="form-label" >Description</label>
+            <textarea required name="listing[description]" placeholder="enter description here" type="text" class="form-control"></textarea>
+        </div>
+
+
+        <div>
+            <label for="image" class="form-label" >Upload Image</label>
+            <input required name="listing[image]"  type="file" class="form-control">
+        </div>
+
+        <div class="row">
+
+            
+            <div class="mb-3 col-4">
+                <label for="price" class="form-label" >Price</label>
+                <input required name="listing[price]" placeholder="enter price here" type="text" class="form-control">
+                 <div class="invalid-feedback">Please enter valid Price</div>
+            </div>
+    
+            <div class="mb-3 col-8">
+                <label for="country" class="form-label" >Country</label>
+                <input required name="listing[country]" placeholder="enter country here" type="text" class="form-control">
+            </div>
+           
+            
+    
+
+        </div>
+
+        
+        <div>
+            <label for="location" class="form-label" >Location</label>
+            <input required name="listing[location]" placeholder="enter location here" type="text" class="form-control">
+        </div>
+
+        <br>
+
+        <button class="btn btn-dark">Add</button>
+       
+
+    </form>
+</div>
+</div>
+
